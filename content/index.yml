@@ -35,27 +35,55 @@ about:
 experience:
   title: Work Experience
   items:
-    - position: "Brand Designer at"
-      date: "2023 - Present"
+    - position: "Mid Vue Developer at"
+      date: "2023/09 - present"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: "Assets Designer at"
-      date: "2022 - 2023"
+        name: "OFERTEO S.A"
+        logo: "i-simple-icons-vuedotjs"
+        url: "https://oferteo.pl"
+        color: "#4FC08D"
+    - position: "Senior Vue.js Developer at"
+      date: "2022/12 - 2023/03"
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
-        url: "https://raycast.com"
-        color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
-      date: "2020 - 2021"
+        name: "WIOSNA organization"
+        logo: "i-simple-icons-vuedotjs"
+        url: "#"
+        color: "#4FC08D"
+    - position: "React Developer at"
+      date: "2021/07 - 2022/03"
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
-        url: "https://linear.app"
-        color: "#5E6AD2"
+        name: "Sii sp. z o.o."
+        logo: "i-simple-icons-react"
+        url: "#"
+        color: "#61DAFB"
+    - position: "Senior Vue.js Developer at"
+      date: "2020/08 - 2021/06"
+      company:
+        name: "Divante S.A"
+        logo: "i-simple-icons-vuedotjs"
+        url: "#"
+        color: "#4FC08D"
+    - position: "Middle Vue.js Developer at"
+      date: "2018 - 2020/08"
+      company:
+        name: "Rainbow Tours S.A"
+        logo: "i-simple-icons-vuedotjs"
+        url: "#"
+        color: "#4FC08D"
+    - position: "Front-End at"
+      date: "2014 - 2018"
+      company:
+        name: "Polish Pharmaceutical Group"
+        logo: "i-lucide-code"
+        url: "#"
+        color: "#888888"
+    - position: "Web Designer at"
+      date: "2011 - 2012"
+      company:
+        name: "Freelance"
+        logo: "i-lucide-paint-bucket"
+        url: "#"
+        color: "#888888"
 testimonials:
   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
     author:
