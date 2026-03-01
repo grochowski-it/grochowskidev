@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: 'https://secure.gravatar.com/avatar/fe6cdb120a3f64222f15e7d252d6b354',
       alt: 'My profile picture'
     },
-    meetingLink: 'https://cal.com/mateusz.grochowski/30min',
+    meetingLink: 'https://cal.com/mateuszgrochowski/30min',
     email: 'mateusz.grochowski1992@gmail.com',
     available: true
   },
