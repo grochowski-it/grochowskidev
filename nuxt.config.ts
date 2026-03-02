@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxt/scripts'
   ],
 
   devtools: {
@@ -32,6 +33,14 @@ export default defineNuxtConfig({
       stylistic: {
         commaDangle: 'never',
         braceStyle: '1tbs'
+      }
+    }
+  },
+
+  scripts: {
+    registry: {
+      googleTagManager: {
+        id: 'GTM-TB84TPHG'
       }
     }
   }
