@@ -44,7 +44,7 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
       { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' }
     ],
-    langDir: 'i18n/locales',
+    langDir: './locales',
     defaultLocale: 'en'
   },
 
@@ -59,8 +59,8 @@ export default defineNuxtConfig({
   studio: {
     repository: {
       provider: 'github',
-      owner: 'mrGrochowski',
-      repo: 'grochowskidev'
+      owner: 'grochowski_it',
+      repo: 'becia'
     }
   }
 })
