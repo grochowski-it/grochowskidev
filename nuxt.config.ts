@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'motion-v/nuxt',
     '@nuxt/scripts',
-    'nuxt-studio'
+    'nuxt-studio',
+    '@nuxtjs/i18n'
   ],
 
   devtools: {
@@ -38,6 +39,15 @@ export default defineNuxtConfig({
     }
   },
 
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' }
+    ],
+    langDir: './locales',
+    defaultLocale: 'en'
+  },
+
   scripts: {
     registry: {
       googleTagManager: {
@@ -49,8 +59,8 @@ export default defineNuxtConfig({
   studio: {
     repository: {
       provider: 'github',
-      owner: 'mrGrochowski',
-      repo: 'grochowskidev'
+      owner: 'grochowski_it',
+      repo: 'becia'
     }
   }
 })
