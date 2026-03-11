@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { locale } = useI18n()
+
 const { data: page } = await useAsyncData('projects-page', () => {
   return queryCollection('pages').path('/projects').first()
 })
@@ -68,7 +70,7 @@ useSeoMeta({
       >
         <UPageCard
           :title="project.title"
-          :description="project.description"
+          :description="locale === 'pl' && project.description_pl ? project.description_pl : project.description"
           :to="project.url"
           orientation="horizontal"
           variant="naked"
