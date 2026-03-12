@@ -19,21 +19,26 @@ useSeoMeta({
   description: 'We are sorry but this page could not be found.'
 })
 
+const { locale } = useI18n()
+const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
+
 const [{ data: navigation }, { data: files }] = await Promise.all([
   useAsyncData('navigation', () => {
     return Promise.all([
-      queryCollectionNavigation('blog')
+      queryCollectionNavigation(collectionName.value)
     ])
   }, {
-    transform: data => data.flat()
+    transform: data => data.flat(),
+    watch: [collectionName]
   }),
   useLazyAsyncData('search', () => {
     return Promise.all([
-      queryCollectionSearchSections('blog')
+      queryCollectionSearchSections(collectionName.value)
     ])
   }, {
     server: false,
-    transform: data => data.flat()
+    transform: data => data.flat(),
+    watch: [collectionName]
   })
 ])
 </script>
