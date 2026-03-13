@@ -60,7 +60,7 @@ defineProps<{
           delay: 0.1
         }"
       >
-        {{ locale === 'pl' && page.title_pl ? page.title_pl : page.title }}
+        {{ locale === 'pl' && (page as any).title_pl ? (page as any).title_pl : page.title }}
       </Motion>
     </template>
 
@@ -81,7 +81,7 @@ defineProps<{
           delay: 0.3
         }"
       >
-        {{ locale === 'pl' && page.description_pl ? page.description_pl : page.description }}
+        {{ locale === 'pl' && (page as any).description_pl ? (page as any).description_pl : page.description }}
       </Motion>
     </template>
 
@@ -106,7 +106,7 @@ defineProps<{
           v-if="page.hero.links"
           class="flex items-center gap-2"
         >
-          <UButton v-bind="{ ...page.hero.links[0], label: locale === 'pl' && page.hero.links[0].label_pl ? page.hero.links[0].label_pl : page.hero.links[0].label }" />
+          <UButton v-bind="{ ...(page.hero.links[0] || {}), label: locale === 'pl' && page.hero.links[0]?.label_pl ? page.hero.links[0].label_pl : page.hero.links[0]?.label }" />
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"

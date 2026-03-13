@@ -43,6 +43,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'index.yml',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         hero: z.object({
           links: z.array(createButtonSchema()),
           images: z.array(createImageSchema())
@@ -135,6 +137,8 @@ export default defineContentConfig({
         { include: 'blog.yml' }
       ],
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         links: z.array(createButtonSchema())
       })
     }),
@@ -156,6 +160,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'about.yml',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         content: z.string().optional(),
         content_pl: z.string().optional(),
         images: z.array(createImageSchema())
