@@ -28,6 +28,10 @@ export default defineNuxtConfig({
     '/**': { prerender: true }
   },
 
+  experimental: {
+    payloadExtraction: true
+  },
+
   compatibilityDate: '2024-11-01',
 
   nitro: {
@@ -38,10 +42,6 @@ export default defineNuxtConfig({
       ],
       crawlLinks: true
     }
-  },
-
-  experimental: {
-    payloadExtraction: true
   },
 
   eslint: {
