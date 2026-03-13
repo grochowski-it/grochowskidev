@@ -28,12 +28,17 @@ export default defineNuxtConfig({
     '/**': { prerender: true }
   },
 
+  experimental: {
+    payloadExtraction: true
+  },
+
   compatibilityDate: '2024-11-01',
 
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/pl'
       ],
       crawlLinks: true
     }

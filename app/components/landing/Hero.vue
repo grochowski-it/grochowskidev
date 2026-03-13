@@ -183,6 +183,10 @@ defineProps<{
         <NuxtImg
           width="234"
           height="234"
+          sizes="234px"
+          format="webp"
+          :loading="index < 4 ? 'eager' : 'lazy'"
+          :fetchpriority="index < 4 ? 'high' : 'auto'"
           class="rounded-lg aspect-square object-cover"
           :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
           v-bind="img"
