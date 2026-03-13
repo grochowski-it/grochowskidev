@@ -3,6 +3,9 @@ defineProps<{
   image: {
     src: string
     alt: string
+    image_x?: string
+    image_y?: string
+    image_fit?: string
   }
   index: number
 }>()
@@ -19,7 +22,8 @@ defineProps<{
     <img
       :src="image.src"
       :alt="image.alt"
-      class="size-32 object-cover"
+      class="size-32"
+      :style="{ objectPosition: `${image.image_x || '50%'} ${image.image_y || '50%'}`, objectFit: image.image_fit || 'cover' }"
     >
     <span class="w-32 text-xs text-black font-serif font-medium text-center mt-2">
       {{ image.alt }}

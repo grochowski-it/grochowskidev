@@ -39,12 +39,12 @@ if (!posts.value) {
         variant="naked"
         v-bind="post"
         :to="post.path.replace(/^\/(en|pl)\//, '/')"
-        :style="{ '--img-pos': `${post.image_x || '50%'} ${post.image_y || '50%'}` }"
+        :style="{ '--img-pos': `${post.image_x || '50%'} ${post.image_y || '50%'}`, '--img-fit': post.image_fit || 'cover' }"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',
           header: 'hidden',
-          image: '![object-position:var(--img-pos)]'
+          image: '[object-position:var(--img-pos)]! [object-fit:var(--img-fit)]!'
         }"
       >
         <template #footer>

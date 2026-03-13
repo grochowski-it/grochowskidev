@@ -20,7 +20,10 @@ const createButtonSchema = () => z.object({
 
 const createImageSchema = () => z.object({
   src: z.string().editor({ input: 'media' }),
-  alt: z.string()
+  alt: z.string(),
+  image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
+  image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+  image_fit: z.enum(['cover', 'contain', 'fill', 'none', 'scale-down']).optional().describe('dopasowanie obrazka')
 })
 
 const createAuthorSchema = () => z.object({
@@ -91,6 +94,7 @@ export default defineContentConfig({
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+        image_fit: z.enum(['cover', 'contain', 'fill', 'none', 'scale-down']).optional().describe('dopasowanie obrazka'),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.date()
@@ -105,6 +109,7 @@ export default defineContentConfig({
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+        image_fit: z.enum(['cover', 'contain', 'fill', 'none', 'scale-down']).optional().describe('dopasowanie obrazka'),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.date()
@@ -119,6 +124,7 @@ export default defineContentConfig({
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+        image_fit: z.enum(['cover', 'contain', 'fill', 'none', 'scale-down']).optional().describe('dopasowanie obrazka'),
         author: createAuthorSchema()
       })
     }),
@@ -131,6 +137,7 @@ export default defineContentConfig({
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+        image_fit: z.enum(['cover', 'contain', 'fill', 'none', 'scale-down']).optional().describe('dopasowanie obrazka'),
         author: createAuthorSchema()
       })
     }),
