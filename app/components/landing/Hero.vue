@@ -183,8 +183,9 @@ defineProps<{
         <NuxtImg
           width="234"
           height="234"
-          class="rounded-lg aspect-square object-cover"
+          class="rounded-lg aspect-square"
           :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
+          :style="{ objectPosition: `${img.image_x || '50%'} ${img.image_y || '50%'}`, objectFit: img.image_fit || 'cover' }"
           v-bind="img"
         />
       </Motion>

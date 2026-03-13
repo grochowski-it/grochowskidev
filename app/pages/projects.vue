@@ -108,8 +108,8 @@ useSeoMeta({
           <img
             :src="project.image"
             :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg"
-            :style="{ objectPosition: `${project.image_x || '50%'} ${project.image_y || '50%'}` }"
+            class="w-full h-48 rounded-lg"
+            :style="{ objectPosition: `${project.image_x || '50%'} ${project.image_y || '50%'}`, objectFit: project.image_fit || 'cover' }"
           >
         </UPageCard>
       </Motion>
