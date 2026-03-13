@@ -50,7 +50,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            :label="locale === 'pl' ? 'Czytaj artykuł' : 'Read Article'"
           >
             <template #trailing>
               <UIcon
