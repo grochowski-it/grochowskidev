@@ -32,6 +32,8 @@
     "@nuxtjs/sitemap": "^7.6.0",
     "eslint": "^10.0.0",
     "nuxt-studio": "1.4.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"
   },
