@@ -27,7 +27,8 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico', media: '(prefers-color-scheme: light)' },
+    { rel: 'icon', href: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' }
   ],
   htmlAttrs: {
     lang: locale
