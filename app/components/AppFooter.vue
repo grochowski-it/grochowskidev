@@ -11,7 +11,6 @@ const localePath = useLocalePath()
   >
     <template #left>
       {{ t('footer.builtBy', { name: 'Mateusz Grochowski', year: new Date().getFullYear() }) }}
-      <span class="mx-2">•</span>
       <NuxtLink
         :to="localePath('/deklaracja-dostepnosci')"
         class="hover:underline"
