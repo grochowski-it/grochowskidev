@@ -121,6 +121,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'en/blog/*.md',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
@@ -134,6 +136,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'pl/blog/*.md',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
