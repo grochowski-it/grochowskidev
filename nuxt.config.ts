@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     'nuxt-studio',
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'nuxt-llms'
   ],
 
   devtools: {
@@ -68,6 +69,16 @@ export default defineNuxtConfig({
       redirectOn: 'root', // recommended
       alwaysRedirect: false,
       fallbackLocale: 'en'
+    }
+  },
+
+  llms: {
+    domain: 'https://grochowski.it',
+    title: 'Mateusz Grochowski - Frontend Developer',
+    description: 'Frontend Developer with 8 years of experience specializing in Nuxt.js, Node.js (Medusa.js), and Supabase.',
+    full: {
+      title: 'Mateusz Grochowski - Full Content',
+      description: 'Full content of Mateusz Grochowski portfolio and blog.'
     }
   },
 
