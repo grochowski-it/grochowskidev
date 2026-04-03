@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
